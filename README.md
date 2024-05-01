@@ -3,7 +3,7 @@
 <h4 align="center">Note: A full install of a supported Linux distro is required! Live USB sessions will not work.</h4>
 
 # Instructions
-1.     git clone https://github.com/WeirdTreeThing/chromebook-linux-audio
+1.     git clone https://github.com/DoughMucker/chromebook-linux-audio
 2.     cd chromebook-linux-audio
 3.     ./setup-audio
 
@@ -12,6 +12,8 @@
 2. `git`
 
 # Supported Devices
+Allows WeirdTreeThing's chromebook audio script on Ubuntu. But no support provided.
+
 See the [Chrultrabook docs](https://docs.chrultrabook.com/docs/firmware/supported-devices.html) for more info.
 
 # Officially Supported Distros
