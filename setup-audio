@@ -45,15 +45,6 @@ def install_ucm():
     cpdir("/tmp/chromebook-ucm-conf/sof-rt5682", "/usr/share/alsa/ucm2/conf.d/sof-rt5682")
     cpdir("/tmp/chromebook-ucm-conf/sof-cs42l42", "/usr/share/alsa/ucm2/conf.d/sof-cs42l42")
 
-
-def ubuntu():
-    print_error("WARNING: UBUNTU IS *NOT* SUPPORTED")
-    print_error("Ubuntu has too many issues that I don't feel like fixing")
-    print_error("If you open an issue on Github and you are running Ubuntu, I will close it right away.")
-    print_error("If you are an Ubuntu user, too bad so sad. Find another audio script.")
-    exit()
-
-
 def install_deb_kernel():
     print_status("Updating linux kernel (this may take some time)")
     try:
@@ -333,9 +324,4 @@ if __name__ == "__main__":
          mkdir("/etc/wireplumber/wireplumber.conf.d/", create_parents=True)
          cpfile("conf/common/51-increase-headroom.conf", "/etc/wireplumber/wireplumber.conf.d/51-increase-headroom.conf")
          
-
-    # ubuntu moment :skull:
-    if distro.lower().__contains__("ubuntu_codename") and not distro.lower().__contains__("pop"):
-        ubuntu()
-
     print_header("Audio installed successfully! Reboot to finish setup.")
